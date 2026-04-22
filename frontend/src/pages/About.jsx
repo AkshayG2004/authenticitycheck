@@ -26,15 +26,15 @@ function About() {
 
         <p>
           AI-generated and manipulated content spreads misinformation,
-          making it harder to distinguish truth from deception.
+          making it harder to verify what is genuine.
         </p>
 
         <p>
-          Like stars in space, data is everywhere, but truth is hidden.
+          Like stars in space, data is everywhere, but the truth is often hidden.
         </p>
 
         <p className="final">
-          Our mission is to help you identify authenticity and trust what you see.
+          Our goal is to help you identify what’s authentic and trust what you see.
         </p>
       </div>
 
