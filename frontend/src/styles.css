@@ -11,19 +11,17 @@ html, body {
   background-size: cover;
 }
 
-/* MAIN CONTAINER */
 .container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* 🔥 CENTERED */
+  justify-content: center;
 
   padding-top: 70px;
   box-sizing: border-box;
 }
 
-/* TITLE */
 .title {
   font-size: 2.8rem;
   margin-bottom: 20px;
@@ -36,7 +34,6 @@ html, body {
   line-height: 1.6;
 }
 
-/* CARD */
 .card {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(16px);
@@ -52,8 +49,8 @@ html, body {
 
   border: 1px solid rgba(255, 255, 255, 0.15);
 
-  height: auto;          /* 🔥 FIX */
-  overflow: visible;     /* 🔥 NO SCROLL */
+  height: auto;    
+  overflow: visible;  
 
   box-shadow: 
     0 20px 40px rgba(0, 0, 0, 0.4),
@@ -62,7 +59,6 @@ html, body {
   transition: 0.3s;
 }
 
-/* UPLOAD BOX */
 .upload-box {
   border: 2px dashed #3b82f6;
   border-radius: 12px;
@@ -93,7 +89,7 @@ html, body {
 
 .preview-box img {
   width: 100%;
-  max-height: 280px; /* 🔥 CONTROL SIZE */
+  max-height: 280px;
   object-fit: contain;
   border-radius: 12px;
   margin-top: 10px;
@@ -192,7 +188,6 @@ textarea {
   }
 }
 
-/* SPINNER */
 .loader {
   width: 18px;
   height: 18px;
@@ -258,4 +253,62 @@ textarea {
 .nav-item.active {
   color: #696e70;
   font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+
+  .container {
+    min-height: 100vh;
+    justify-content: center; 
+    padding: 0 16px;         
+  }
+
+  /* TEXT */
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 0 8px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 360px;  
+    margin: 0 auto;    
+
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .upload-box {
+    padding: 18px;
+  }
+
+  textarea {
+    height: 90px;
+    font-size: 13px;
+  }
+
+  .analyze-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .navbar {
+    padding: 10px 16px;
+    height: 60px;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-item {
+    font-size: 13px;
+  }
 }

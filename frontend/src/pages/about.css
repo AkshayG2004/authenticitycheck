@@ -1,8 +1,8 @@
 .about-container {
   position: relative;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  height: 100vh;       
+  overflow: hidden;     
 }
 
 .about-video {
@@ -12,13 +12,16 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: 0;
 }
 
+/* OVERLAY */
 .about-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
 .about-content {
@@ -30,36 +33,58 @@
   align-items: center;
   justify-content: center;
 
+  height: 100%;         
+
   text-align: center;
 
-  height: 100%;
-  padding: 0 20px;
-
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0 20px;    
 }
 
+/* HEADING */
 .about-content h1 {
   font-size: 3rem;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .about-content p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: #cbd5f5;
-  margin: 15px 0;
-  line-height: 1.7;
+  margin: 12px 0;   
+  line-height: 1.6;
 }
 
 .highlight {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: white;
   font-weight: bold;
 }
 
+/* FINAL */
 .final {
-  margin-top: 25px;
-  font-size: 1.2rem;
+  margin-top: 18px;
+  font-size: 1.1rem;
   color: #c22c84;
   font-weight: bold;
+}
+
+@media (max-width: 480px) {
+
+  .about-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-content p {
+    font-size: 13.5px;
+    margin: 10px 0;
+  }
+
+  .highlight {
+    font-size: 1rem;
+  }
+
+  .final {
+    font-size: 0.95rem;
+  }
 }
