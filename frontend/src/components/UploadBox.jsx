@@ -44,7 +44,7 @@ function UploadBox() {
       formData.append("image", imageFile);
       formData.append("caption", caption);
 
-      const response = await fetch("http://localhost:5000/analyze", {
+      const response = await fetch("https://authenticitycheck.onrender.com/analyze", {
         method: "POST",
         body: formData,
       });
