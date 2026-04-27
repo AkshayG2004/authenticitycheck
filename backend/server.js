@@ -3,14 +3,13 @@ import cors from "cors";
 import multer from "multer";
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-/* 🔥 HASH FUNCTION (makes output consistent) */
 function getHash(str) {
   let hash = 0;
   for (let i = 0; i < str.length; i++) {
@@ -19,13 +18,11 @@ function getHash(str) {
   return Math.abs(hash);
 }
 
-/* 🔥 PICK FIXED ITEMS (NO RANDOMNESS) */
 function pickReasons(arr, seed) {
   const start = seed % (arr.length - 2);
   return arr.slice(start, start + 3);
 }
 
-/* 🔥 SMART + DETERMINISTIC ANALYSIS */
 function analyzeImage(file) {
   const name = file.originalname.toLowerCase();
   const sizeKB = Math.floor(file.size / 1024);
@@ -41,7 +38,6 @@ function analyzeImage(file) {
   if (sizeKB < 100) score += 1;
   if (sizeKB > 2000) score -= 1;
 
-  // 🔥 Mix with seed (important for stability)
   score += seed % 3;
 
   let status;
