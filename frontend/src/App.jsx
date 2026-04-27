@@ -7,9 +7,8 @@ function App() {
   return (
     <Router>
 
-      {/* 🔝 NAVBAR */}
       <nav className="navbar">
-        <div className="nav-logo">AuthenticityCheck AI</div>
+        <div className="nav-logo">AuthenticityCheck</div>
 
         <div className="nav-links">
           <NavLink to="/" className="nav-item">
